@@ -1,0 +1,15 @@
+<%- include("header.ejs") %>
+<body>
+       
+  <div class="post">
+    <p class="card-text">The post id is <%= post.id %></p>
+ <div class="card" >
+  <div class="card-body">
+    <h5 class="card-title" style="text-align: center;" ><%= post.Name %></h5>
+    <p class="card-text"style="text-align: center;"><%= post.body %>.</p>
+     <a href="/edit/<%- post.id %>" class="btn btn-primary">Edit the Post</a>
+    <a href="/delete/<%- post.id %>" class="btn btn-primary">Delete the Post</a></div>
+</div>
+
+</body>
+</html>

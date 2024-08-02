@@ -1,0 +1,23 @@
+<%- include("header.ejs") %>
+<body>
+    <a href="/new" class="btn btn-success" style="margin-left: auto;margin-right: auto; display: block;    position: sticky;top: 0px;right: 0px;"> add the new post</a>
+  <% for(post of posts){ %><div class="post">
+    <div class="card" >
+  <div class="card-body">
+    <h5 class="card-title" style="text-align: center;" >Name: <%= post.Name %></h5>
+    <% if (post.body.length<=90) {%>
+      <p class="card-text"style="text-align: center;"><%= post.body %>.</p>
+    <% } %>
+    <% if (post.body.length>90) {%>
+    <p class="card-text"style="text-align: center;"><%= post.body.slice(0,91) %> ... <a href="/post/<%- post.id %>"> See All</a></p>
+    <% } %>
+    <a href="/post/<%- post.id %>" class="btn btn-primary">Show Detail</a>
+    <a href="/edit/<%- post.id %>" class="btn btn-primary">Edit the Post</a>
+    <a href="/delete/<%- post.id %>" class="btn btn-primary">Delete the Post</a>
+  </div>
+</div>
+  </div>
+ </div>
+ <% } %>
+</body>
+</html>

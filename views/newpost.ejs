@@ -1,0 +1,15 @@
+<%- include("header.ejs") %>
+<body>
+    <form action="/new" method="post">
+             <div class="mb-3">
+  <label for="exampleFormControlInput1" class="form-label">Your Name</label>
+  <input type="text" name="title" class="form-control" id="exampleFormControlInput1" placeholder="Your name">
+</div>
+<div class="mb-3">
+  <label for="exampleFormControlTextarea1" class="form-label">Discription</label>
+  <textarea class="form-control" name="discription" id="exampleFormControlTextarea1" rows="3" placeholder="Discription"></textarea>
+      <button type="submit"  class="btn btn-primary mb-3 ms-4 p-2">Add the Post</button>
+</div>
+    </form>
+</body>
+</html>

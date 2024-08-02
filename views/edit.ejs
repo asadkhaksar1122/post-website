@@ -1,0 +1,16 @@
+<%- include("header.ejs") %>
+</head>
+<body>
+    <form action="/edit/<%= post[0].id %>" method="post" >
+       <div class="mb-3">
+  <label for="exampleFormControlInput1"  class="form-label"> Your Name</label>
+  <input type="text" name="title" class="form-control" value="<%= post[0].Name %>" id="exampleFormControlInput1" placeholder="Discription" disabled>
+</div>
+<div class="mb-3">
+  <label for="exampleFormControlTextarea1" class="form-label">Discription</label>
+  <textarea class="form-control" name="discription" placeholder="Discription" id="exampleFormControlTextarea1" rows="3"><%= post[0].body %></textarea>
+     <br> <button type="submit"  class="btn btn-primary mb-3 ms-4 p-2 ">Updated Post</button>
+</div>
+    </form>
+</body>
+</html>

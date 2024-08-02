@@ -1,0 +1,11 @@
+.post{
+    background-color: yellowgreen;
+}
+.post h1,h4{
+    text-align: center;
+}
+.post a{
+    border: 2px solid black;
+    border-radius: 5px;
+    padding: 3px 2px;
+}
